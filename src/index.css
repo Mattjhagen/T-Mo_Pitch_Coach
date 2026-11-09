@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --brand-magenta: #e20074;
+    --brand-magenta-hover: #c40064;
+    --brand-magenta-light: #ff3399;
+    --brand-magenta-subtle: rgba(226, 0, 116, 0.12);
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+}
+
+/* Sunlight mode for extreme outdoor daylight legibility */
+.sunlight-mode {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.sunlight-mode .sunlight-card {
+  background-color: #ffffff !important;
+  border: 3px solid #000000 !important;
+  box-shadow: 0 4px 0 0 #000000 !important;
+  color: #000000 !important;
+}
+
+.sunlight-mode .sunlight-text {
+  color: #000000 !important;
+  font-weight: 800 !important;
+}
+
+.sunlight-mode .sunlight-button {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+  font-weight: 700 !important;
+}
+
+.sunlight-mode .sunlight-primary {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #000000 !important;
+  font-weight: 800 !important;
+}
+
+/* Custom scrollbar for mobile drawers */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.2);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.4);
+}

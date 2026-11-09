@@ -1,0 +1,6 @@
+{
+  "name": "PitchPilot - T-Mobile Fiber Sales Navigator",
+  "description": "Mobile-first interactive sales playbook and real-time conversation navigator for T-Mobile Fiber door-to-door representatives.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

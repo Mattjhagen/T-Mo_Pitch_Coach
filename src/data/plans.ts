@@ -1,0 +1,43 @@
+import { PlanConfig } from '../types';
+
+export const DEFAULT_PLANS: PlanConfig[] = [
+  {
+    id: 'plan_fiber_500',
+    name: 'T-Mobile Fiber 500',
+    speed: '500 Mbps symmetrical',
+    price: 35,
+    promoPrice: 30,
+    promoDuration: 'with qualifying voice line',
+    equipmentFee: '$0 / mo (Wi-Fi 6 Gateway included)',
+    installationFee: '$0 (Professional installation waived)',
+    contract: 'No annual contract',
+    perks: ['Symmetrical upload & download', 'Unlimited data (no data caps)', 'Price lock guarantee'],
+    idealFor: 'Streaming, browsing, everyday multi-device households',
+  },
+  {
+    id: 'plan_fiber_1000',
+    name: 'T-Mobile Fiber 1 GIG',
+    speed: '1,000 Mbps symmetrical',
+    price: 55,
+    promoPrice: 50,
+    promoDuration: 'with AutoPay & Voice line discount',
+    equipmentFee: '$0 / mo (Wi-Fi 6E Gateway included)',
+    installationFee: '$0 (Standard installation included)',
+    contract: 'No annual contract',
+    perks: ['True 1 Gbps fiber dedicated pipeline', 'Zero peak-hour lag or throttling', 'Ideal for remote work & gamers'],
+    idealFor: 'Power users, WFH professionals, 4K multi-screen streaming, heavy gaming',
+  },
+  {
+    id: 'plan_fiber_2000',
+    name: 'T-Mobile Fiber 2 GIG',
+    speed: '2,000 Mbps symmetrical',
+    price: 75,
+    promoPrice: 70,
+    promoDuration: 'Special neighborhood expansion offer',
+    equipmentFee: '$0 / mo (Next-Gen Multi-Gig Wi-Fi 7 Gateway)',
+    installationFee: '$0 (White-glove activation)',
+    contract: 'No annual contract',
+    perks: ['Ultra-low single-digit ping (<5ms)', 'Simultaneous multi-stream 8K & high-frequency backups', 'Priority support routing'],
+    idealFor: 'Tech enthusiasts, creator studios, smart homes with 40+ connected devices',
+  },
+];
