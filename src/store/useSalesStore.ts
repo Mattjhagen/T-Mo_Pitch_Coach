@@ -84,6 +84,7 @@ interface SalesState {
 const STORAGE_KEYS = {
   SESSIONS: 'pitchpilot_sessions_v1',
   PLANS: 'pitchpilot_plans_v1',
+  PLANS_VERSION: 'pitchpilot_plans_version',
   COACHING: 'pitchpilot_coaching_v1',
   PREFS: 'pitchpilot_prefs_v1',
   CUSTOM_NODES: 'pitchpilot_custom_nodes_v1',
@@ -120,7 +121,17 @@ const initialContext: CustomerContext = {
 
 export const useSalesStore = create<SalesState>((set, get) => {
   const storedSessions = loadStored<SessionRecord[]>(STORAGE_KEYS.SESSIONS, []);
-  const storedPlans = loadStored<PlanConfig[]>(STORAGE_KEYS.PLANS, DEFAULT_PLANS);
+  // Refresh legacy plan settings once when the official sales-card lineup changes.
+  // This touches only plan settings; coaching, sessions, and custom scripts remain intact.
+  const planVersion = '2026-11-10-four-tiers';
+  const savedVersion = loadStored<string>(STORAGE_KEYS.PLANS_VERSION, '');
+  const storedPlans = savedVersion === planVersion
+    ? loadStored<PlanConfig[]>(STORAGE_KEYS.PLANS, DEFAULT_PLANS)
+    : DEFAULT_PLANS;
+  if (savedVersion !== planVersion) {
+    saveStored(STORAGE_KEYS.PLANS, DEFAULT_PLANS);
+    saveStored(STORAGE_KEYS.PLANS_VERSION, planVersion);
+  }
   const storedCoaching = loadStored<Record<string, RebuttalStat>>(STORAGE_KEYS.COACHING, INITIAL_COACHING_STATS);
   const storedCustomNodes = loadStored<Record<string, ConversationNode>>(STORAGE_KEYS.CUSTOM_NODES, {});
   const storedPrefs = loadStored<{ sunlightMode?: boolean; largeTextMode?: boolean; audioEnabled?: boolean }>(
