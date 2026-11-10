@@ -40,4 +40,15 @@ export const DEFAULT_PLANS: PlanConfig[] = [
     perks: ['Ultra-low single-digit ping (<5ms)', 'Simultaneous multi-stream 8K & high-frequency backups', 'Priority support routing'],
     idealFor: 'Tech enthusiasts, creator studios, smart homes with 40+ connected devices',
   },
+  {
+    id: 'plan_fiber_5000',
+    name: 'T-Mobile Fiber 5 GIG',
+    speed: '5,000 Mbps symmetrical',
+    price: 90,
+    equipmentFee: 'Wi-Fi equipment included',
+    installationFee: '$0 (Installation included)',
+    contract: 'No annual contract',
+    perks: ['10 Year Price Guarantee', 'Headroom for everything at once', 'Installation included', 'Exclusive T-Mobile Tuesdays perks'],
+    idealFor: 'Power users, large connected households, and demanding multi-device setups',
+  },
 ];
