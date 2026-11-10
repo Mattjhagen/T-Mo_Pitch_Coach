@@ -1167,17 +1167,17 @@ export const CONVERSATION_NODES: Record<string, ConversationNode> = {
     stageNumber: 4,
     stageName: 'Value Presentation',
     title: 'Plan Showcase & Comparison',
-    script: "Here are our two most popular neighbor tiers: Fiber 500 at $35/mo for everyday streaming and working, or Fiber 1 GIG at $55/mo for power users and heavy multi-device homes. Both include Wi-Fi 6 equipment, unlimited data, and no annual contracts.",
+    script: "Here are our two most popular neighbor tiers: Fiber 300 at $35/mo for everyday streaming and working, or Fiber 1 GIG at $55/mo for power users and heavy multi-device homes. Both include Wi-Fi 6 equipment, unlimited data, and no annual contracts.",
     coachingTip: 'Present both choices clearly. The 500 Mbps plan is an incredible deal, and 1 Gig is only $20 more.',
     reasoning: 'Gives the customer an alternate choice between two positive options rather than a choice between buying or not buying.',
     responses: [
       {
         id: 'resp_plan_pick_500',
-        label: 'Prefers Fiber 500 ($35/mo)',
+        label: 'Prefers Fiber 300 ($35/mo)',
         subtitle: 'Unbeatable everyday value',
         intent: 'buying_signal',
         nextNodeId: 'node_close_offer_presentation',
-        contextUpdate: { selectedPlanId: 'plan_fiber_500' },
+        contextUpdate: { selectedPlanId: 'plan_fiber_300' },
       },
       {
         id: 'resp_plan_pick_1000',
@@ -1499,16 +1499,16 @@ export const CONVERSATION_NODES: Record<string, ConversationNode> = {
     stageNumber: 7,
     stageName: 'Closing Process',
     title: 'Step 3: Present Verified Eligible Offers',
-    script: "Great news—your address is greenlit for fiber! We can do Fiber 500 for $35/mo or Fiber 1 GIG for $55/mo with AutoPay. Both include the Wi-Fi 6 gateway at $0 and free standard installation. Which of those two fits your home best?",
+    script: "Great news—your address is greenlit for fiber! We can do Fiber 300 for $35/mo or Fiber 1 GIG for $55/mo with AutoPay. Both include the Wi-Fi 6 gateway at $0 and free standard installation. Which of those two fits your home best?",
     coachingTip: 'Use the alternate-choice close: "Which of those two fits your home best?" instead of "Do you want to buy?"',
     reasoning: 'Directs their focus toward picking the ideal speed tier.',
     responses: [
       {
         id: 'resp_off_pick_500',
-        label: 'Selects Fiber 500 ($35/mo)',
+        label: 'Selects Fiber 300 ($35/mo)',
         intent: 'positive',
         nextNodeId: 'node_close_verify_terms',
-        contextUpdate: { selectedPlanId: 'plan_fiber_500' },
+        contextUpdate: { selectedPlanId: 'plan_fiber_300' },
       },
       {
         id: 'resp_off_pick_1000',
@@ -1519,12 +1519,19 @@ export const CONVERSATION_NODES: Record<string, ConversationNode> = {
       },
       {
         id: 'resp_off_pick_2000',
-        label: 'Selects Fiber 2 GIG ($75/mo)',
+        label: 'Selects Fiber 2 GIG ($70/mo)',
         intent: 'positive',
         nextNodeId: 'node_close_verify_terms',
         contextUpdate: { selectedPlanId: 'plan_fiber_2000' },
       },
-    ],
+
+      {
+        id: 'resp_off_pick_5000',
+        label: 'Selects Fiber 5 GIG ($90/mo)',
+        intent: 'positive',
+        nextNodeId: 'node_close_verify_terms',
+        contextUpdate: { selectedPlanId: 'plan_fiber_5000' },
+      },    ],
   },
 
   node_close_verify_terms: {
