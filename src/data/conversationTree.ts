@@ -1531,7 +1531,8 @@ export const CONVERSATION_NODES: Record<string, ConversationNode> = {
         intent: 'positive',
         nextNodeId: 'node_close_verify_terms',
         contextUpdate: { selectedPlanId: 'plan_fiber_5000' },
-      },    ],
+      },
+    ],
   },
 
   node_close_verify_terms: {
