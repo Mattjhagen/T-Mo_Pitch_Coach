@@ -206,7 +206,7 @@ export const ClosingWorkflowModal: React.FC = () => {
                 {isVerified && (
                   <div className="p-3 rounded-xl bg-emerald-950/40 border border-emerald-500/50 text-emerald-200 text-xs flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                    <span><strong>Greenlit!</strong> Pure FTTH terminal active on street. Eligible for 500M, 1G & 2G tiers.</span>
+                    <span><strong>Greenlit!</strong> Pure FTTH terminal active on street. Plan options: 300M, 1G, 2G & 5G (confirm address-specific availability).</span>
                   </div>
                 )}
               </div>
