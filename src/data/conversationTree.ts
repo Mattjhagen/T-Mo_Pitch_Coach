@@ -10,7 +10,7 @@ export const CONVERSATION_NODES: Record<string, ConversationNode> = {
     stageNumber: 1,
     stageName: 'Opening Pitch',
     title: 'Neighborhood Fiber Rollout',
-    script: "Hey, how's it going? I'm with T-Mobile. We've got crews bringing fiber into the neighborhood, and I'm just checking who everyone's using for internet right now.",
+    script: "Hi, I'm with T-Mobile Fiber. We're going to be coming back through the area for the next few weeks. Since we've been in your neighborhood, have you had a chance to speak with us yet?",
     coachingTip: 'Keep your body language relaxed, step two paces back from the threshold so they have personal space, and deliver with a friendly, conversational smile.',
     reasoning: 'Non-pushy informational introduction that frames the visit as an operational neighborhood update rather than a hard telemarketing pitch.',
     customerContext: ['Neighborhood fiber construction in progress'],
