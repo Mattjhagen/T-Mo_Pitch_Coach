@@ -5,7 +5,7 @@ export const OPENING_STYLES: OpeningStyle[] = [
     id: 'friendly',
     name: 'Friendly & Casual',
     description: 'Relaxed, warm, and natural for open, welcoming homeowners',
-    script: "Hey, how's it going? I'm with T-Mobile. We've got crews bringing fiber into the neighborhood, and I'm just checking who everyone's using for internet right now.",
+    script: "Hi, I'm with T-Mobile Fiber. We're going to be coming back through the area for the next few weeks. Since we've been in your neighborhood, have you had a chance to speak with us yet?",
     coaching: 'Keep your body language open, step two paces back from the threshold so they have personal space, and deliver with a friendly smile.',
   },
   {
